@@ -40,6 +40,8 @@ under the License.
 
         <play2.plugin.version>1.0.0-rc5</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0</sbt-compiler.plugin.version>
+        <play2.templateSourceDirectory>${basedir}/src/main/twirl</play2.templateSourceDirectory>
+        <play2.assetsDirectory>${basedir}/src/main/assets</play2.assetsDirectory>
     </properties>
 
     <dependencies>
@@ -143,14 +145,12 @@ under the License.
     </dependencies>
 
     <build>
-        <sourceDirectory>${basedir}/app</sourceDirectory>
-        <testSourceDirectory>${basedir}/test</testSourceDirectory>
         <resources>
             <resource>
-                <directory>${basedir}/conf</directory>
+                <directory>${basedir}/src/main/resources</directory>
             </resource>
             <resource>
-                <directory>${basedir}/public</directory>
+                <directory>${basedir}/src/main/public</directory>
                 <targetPath>public</targetPath>
             </resource>
         </resources>
